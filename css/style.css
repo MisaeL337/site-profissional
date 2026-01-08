@@ -1,0 +1,428 @@
+/* Variáveis de Cores - Tema Clean/WordPress */
+:root {
+  --primary-color: #2563eb; /* Azul Royal Profissional */
+  --primary-hover: #1d4ed8;
+  --text-dark: #1e293b;     /* Cinza Escuro para Títulos */
+  --text-body: #475569;     /* Cinza Médio para Texto */
+  --bg-light: #f8fafc;      /* Fundo muito claro (quase branco) */
+  --bg-white: #ffffff;
+  --border-color: #e2e8f0;
+  --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background-color: var(--bg-white);
+  color: var(--text-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Header Estilo Barra de Navegação WP */
+.main-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--bg-white);
+  box-shadow: none;
+  z-index: 1000;
+  padding: 15px 0;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h2 {
+  color: var(--text-dark);
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.nav-menu ul {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-menu a {
+  color: var(--text-dark);
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-decoration: none; /* Garante sem sublinhado */
+  border: none;          /* Garante sem bordas */
+}
+
+.nav-menu a:hover {
+  color: var(--primary-color);
+}
+
+/* Container Geral */
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero Section - Clean */
+.section-home {
+  padding: 160px 0 100px;
+  background-color: var(--bg-light);
+  display: flex;
+  align-items: center;
+  min-height: 90vh;
+}
+
+.home-grid {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.tagline {
+  color: var(--primary-color);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.home-text h1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.home-text .sub {
+  font-size: 1.25rem;
+  color: var(--text-body);
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.home-text .desc {
+  color: var(--text-body);
+  max-width: 700px;
+  margin-bottom: 30px;
+  font-size: 1.05rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 14px 32px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+.btn.primary {
+  background: var(--primary-color);
+  color: white;
+  box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.3);
+}
+
+.btn.primary:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-dark);
+}
+
+.btn.secondary:hover {
+  border-color: var(--text-dark);
+  background: #fff;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  opacity: 0.6;
+  transition: 0.3s;
+  filter: none; /* Remove inversão de cores antiga */
+}
+
+.social-icons img:hover {
+  opacity: 1;
+  transform: translateY(-3px);
+}
+
+/* Seções Gerais */
+section {
+  padding: 100px 0;
+}
+
+.section-title {
+  font-size: 2.25rem;
+  margin-bottom: 15px;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.section-subtitle {
+  color: var(--text-body);
+  margin-bottom: 60px;
+  font-size: 1.1rem;
+}
+
+/* About Section */
+.about-section {
+  background: var(--bg-white);
+}
+
+.about-grid {
+  display: block;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: var(--text-dark);
+}
+
+.about-note {
+  background: #eff6ff; /* Azul bem claro */
+  border-left: 4px solid var(--primary-color);
+  padding: 20px;
+  margin: 30px 0;
+  border-radius: 0 8px 8px 0;
+  color: #1e3a8a;
+  font-style: italic;
+  text-align: left;
+}
+
+/* Novos Cards de Serviço */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+  text-align: left;
+}
+
+.service-card {
+  background: var(--bg-light);
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow-card);
+}
+
+.service-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+  color: var(--text-dark);
+}
+
+.service-card p {
+  color: var(--text-body);
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+/* Portfolio Grid */
+.portfolio-section {
+  background: var(--bg-light);
+}
+
+.portfolio-wrapper {
+  position: relative;
+  padding: 0 10px;
+}
+
+.portfolio-track-container {
+  overflow: hidden;
+  padding: 20px 5px; /* Espaço para o efeito de hover não cortar */
+}
+
+.portfolio-track {
+  display: flex;
+  gap: 40px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.project-card {
+  min-width: 320px; /* Largura fixa para o carrossel */
+  flex: 0 0 auto;   /* Impede que o card encolha */
+  background: var(--bg-white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: none; /* Remove bordas conforme pedido */
+}
+
+.project-card a {
+  text-decoration: none;
+  border: none;
+  display: block;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.project-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: none; /* Remove linha abaixo da imagem */
+}
+
+.project-info {
+  padding: 25px;
+}
+
+.project-info h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.25rem;
+  color: var(--text-dark);
+  border: none;
+}
+
+.project-info span {
+  font-size: 0.9rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Botões do Carrossel */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #fff;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  transition: 0.3s;
+}
+
+.carousel-btn:hover {
+  background: var(--primary-color);
+  color: #fff;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn.prev { left: -20px; }
+.carousel-btn.next { right: -20px; }
+
+@media (max-width: 768px) {
+  .carousel-btn.prev { left: 0; }
+  .carousel-btn.next { right: 0; }
+}
+
+/* Contact Section */
+.contact-section {
+  background: var(--bg-white);
+  text-align: center;
+}
+
+.contact-cta {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.btn-whatsapp {
+  background-color: #25D366; /* Verde Oficial WhatsApp */
+  color: white;
+  font-size: 1.1rem;
+  padding: 16px 40px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 50px; /* Botão arredondado */
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+}
+
+.btn-whatsapp:hover {
+  background-color: #128C7E;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+.btn-whatsapp img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1); /* Deixa o ícone branco */
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .home-grid, .about-grid, .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .home-text h1 {
+    font-size: 2.5rem;
+  }
+  .section-home {
+    padding-top: 100px;
+    text-align: center;
+  }
+  .buttons {
+    justify-content: center;
+  }
+  .social-icons {
+    justify-content: center;
+  }
+  .nav-menu {
+    display: none; /* Em produção, adicionar menu mobile */
+  }
+}
